@@ -1,6 +1,6 @@
 <?php
-// api/get_productos.php
-header("Access-Control-Allow-Origin: *");
+$allowed_origin = "https://examen-final-christian-ferrufino.vercel.app";
+header("Access-Control-Allow-Origin: $allowed_origin");
 header("Content-Type: application/json; charset=UTF-8");
 
 $db_host = "aws-1-us-east-1.pooler.supabase.com";
