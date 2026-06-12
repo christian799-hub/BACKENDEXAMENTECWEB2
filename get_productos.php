@@ -1,6 +1,8 @@
 <?php
-$allowed_origin = "https://examen-final-christian-ferrufino.vercel.app";
-header("Access-Control-Allow-Origin: $allowed_origin");
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (preg_match('/^https?:\/\/.*\.vercel\.app$/', $origin) || $origin === 'http://localhost:5173') {
+    header("Access-Control-Allow-Origin: $origin");
+}
 header("Content-Type: application/json; charset=UTF-8");
 
 $db_host = "aws-1-us-east-1.pooler.supabase.com";
