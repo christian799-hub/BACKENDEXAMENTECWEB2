@@ -3,8 +3,10 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$allowed_origin = "https://examen-final-christian-ferrufino.vercel.app";
-header("Access-Control-Allow-Origin: $allowed_origin");
+$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if (preg_match('/^https?:\/\/.*\.vercel\.app$/', $origin) || $origin === 'http://localhost:5173') {
+    header("Access-Control-Allow-Origin: $origin");
+}
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With, Accept, body");
 header("Content-Type: application/json; charset=UTF-8");
