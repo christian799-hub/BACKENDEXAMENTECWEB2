@@ -9,7 +9,7 @@ $db_host = "aws-1-us-east-1.pooler.supabase.com";
 $db_user = "postgres.ugqunucxnoxvdzztxeim";
 $db_pass = "12345678Examen--";
 $db_name = "postgres";   
-$db_port = "6543";
+$db_port = "5432";
 
 try {
     $dsn = "pgsql:host=$db_host;port=$db_port;dbname=$db_name;sslmode=require";
