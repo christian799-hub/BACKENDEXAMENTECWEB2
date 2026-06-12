@@ -16,7 +16,7 @@ $db_user = "postgres.ugqunucxnoxvdzztxeim";
 $db_pass = "12345678Examen--";
 $db_name = "postgres";   
 $db_port = "5432";
-
+$jwt_secret = "12345678Examen--";
 
 
 try {
