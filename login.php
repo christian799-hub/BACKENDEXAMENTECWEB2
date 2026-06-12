@@ -1,6 +1,6 @@
 <?php
-// api/login.php
-header("Access-Control-Allow-Origin: *");
+$allowed_origin = "https://examen-final-christian-ferrufino.vercel.app";
+header("Access-Control-Allow-Origin: $allowed_origin");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
